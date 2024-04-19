@@ -17,7 +17,7 @@ def visit_page(url, driver, visited_urls, redirections, depth, max_depth):
         # Make Security Test
         input_fields = driver.find_elements(By.XPATH, '//input[@type="text"]')
         for field in input_fields:
-            field.send_keys("hi")
+            field.send_keys("'-- OR 1=1;")
         
         # Collect links to treat as redirections without following them
         if depth < max_depth:
